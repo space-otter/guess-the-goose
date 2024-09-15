@@ -1,0 +1,10 @@
+---
+import { default as BaseLayout } from "../../layouts/Base.astro";
+import { Game } from "./_Game";
+---
+
+<BaseLayout>
+  <h1>Game</h1>
+  <p>Session ID: 12345</p>
+  <Game client:load />
+</BaseLayout>

@@ -1,0 +1,77 @@
+---
+import { default as BaseLayout } from "../../layouts/Base.astro";
+import { css } from "../../../styled-system/css";
+---
+
+<BaseLayout>
+  <h1>Create a new session</h1>
+  <section>
+    <h2>Game rules</h2>
+    <p
+      class={css({
+        fontSize: "1.25rem",
+        lineHeight: "1.33",
+      })}
+    >
+      The goal of Hangman is to guess a hidden word by suggesting letters within
+      a certain number of attempts. Players win if they guess the word before
+      all attempts are used up.
+    </p>
+    <ol
+      class={css({
+        display: "flex",
+        flexDirection: "column",
+        gap: "1rem",
+      })}
+    >
+      <li>
+        One player (or the game system) chooses a secret word, which is hidden
+        from the guessing player.
+      </li>
+      <li>
+        If the guessed letter is in the word, all occurrences of that letter are
+        revealed in their correct positions. If the letter is not in the word,
+        the number of remaining attempts decreases, and part of the hangman
+        figure is drawn.
+      </li>
+      <li>
+        The guessing player wins if they correctly guess all the letters in the
+        word before they run out of attempts.
+      </li>
+    </ol>
+  </section>
+  <form>
+    <label>
+      Session Name
+      <input type="text" />
+    </label>
+    <label>
+      Password
+      <input type="password" />
+    </label>
+    <label>
+      Which mode?
+      <select>
+        <option value="classic">Classic</option>
+      </select>
+    </label>
+    <fieldset>
+      <legend>Condiguration (for Classic Mode)</legend>
+      <label>
+        Number of players
+        <input type="number" min="2" max="7" />
+      </label>
+      <p>You can choose between 2 and 7 player per session.</p>
+      <label>
+        How long should the game last?
+        <input type="time" step="20" min="00:01:00" max="00:05:00" />
+      </label>
+      <p>You can choose between and 7 player per session.</p>
+      <label>
+        How many rounds?
+        <input type="number" min="1" max="12" />
+      </label>
+    </fieldset>
+    <p><button type="submit">Open new session</button></p>
+  </form>
+</BaseLayout>
