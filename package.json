@@ -1,21 +1,21 @@
 {
-  "name": "hangmansion",
-  "type": "module",
-  "scripts": {
-    "prepare": "panda codegen",
-    "dev": "vinxi dev",
-    "build": "vinxi build",
-    "start": "vinxi start"
-  },
-  "dependencies": {
-    "@solidjs/start": "^1.0.6",
-    "solid-js": "^1.8.18",
-    "vinxi": "^0.4.1"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "devDependencies": {
-    "@pandacss/dev": "^0.46.0"
-  }
+	"name": "guess-the-goose",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"prepare": "panda codegen"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.9.3",
+		"astro": "^4.15.6",
+		"typescript": "^5.6.2"
+	},
+	"devDependencies": {
+		"@pandacss/dev": "^0.46.0"
+	}
 }

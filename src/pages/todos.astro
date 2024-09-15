@@ -1,0 +1,60 @@
+---
+import { default as BaseLayout } from "../layouts/Base.astro";
+---
+
+<BaseLayout>
+  <section>
+    <h2>Feature list</h2>
+    <ul>
+      <li>
+        <label>
+          <input type="checkbox" /> Add a start menu (Session management, Options,
+          etc.)
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" /> Implement a simple game mode
+        </label>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" /> Implement Fox as the Word Setter
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" /> Implement Gooser as the guessing player (Gueseer)
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" /> Winning (Fox): Nobody of the players has
+              guessed the word
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" /> Winning (Gooser): The word has been guessed
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" /> Add a timer to the game
+            </label>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" /> Display the secret word as a series of underscores.
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" /> Polish the UI
+        </label>
+      </li>
+    </ul>
+  </section>
+</BaseLayout>
